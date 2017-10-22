@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bleBackground"
+        tools:context="com.flomio.smartcartlib.activity.pairing.BLEPairingActivity">
+
+
+
+    <ImageView
+            android:src="@drawable/ic_shopping_cart_black_combined_v2"
+            android:id="@+id/bluetoothLogo"
+            android:layout_centerInParent="true"
+            android:layout_height="120dp"
+            android:layout_width="120dp">
+
+    </ImageView>
+    <ProgressBar
+            android:id="@+id/image_load_progress"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+
+            android:indeterminate="true" />
+
+</RelativeLayout>

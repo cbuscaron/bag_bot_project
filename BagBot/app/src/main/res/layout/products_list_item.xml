@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4px"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/product_image_parent"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center" >
+
+            <ProgressBar
+                    android:id="@+id/image_load_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+
+            <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/product_image_parent"
+                android:text="Vegemite"
+                android:textColor="#22536d"
+                android:textSize="24sp" />
+
+        <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_toRightOf="@id/product_image_parent"
+                android:text="400gm of the best Australian spread. Black gold, Australian grease."
+                android:textSize="12sp" />
+
+        <TextView
+                android:id="@+id/productQuantity"
+                android:layout_width="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text2"
+                android:layout_toRightOf="@id/product_image_parent"
+                android:text="10 added. "
+                android:textSize="12sp" />
+        <TextView
+                android:id="@+id/productPrice"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:textColor="#22536d"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text2"
+                android:layout_toRightOf="@id/productQuantity"
+                android:text="$10.00"
+                android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

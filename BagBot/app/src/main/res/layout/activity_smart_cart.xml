@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.flomio.smartcart.activity.cart.SmartCartActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_toolbar"
+            android:id="@+id/totalCard"
+            android:layout_margin="0dp"
+            app:cardBackgroundColor="#333333"
+            app:cardElevation="4px"
+            app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+            <ImageView
+                    android:id="@+id/headerCartIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_shopping_cart_grey" />
+
+            <TextView
+                    android:id="@+id/totalLine1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="108dp"
+                    android:layout_marginTop="6dp"
+
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/totalLine2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_below="@id/my_toolbar"
+            android:id="@+id/totalCard"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardUseCompatPadding="true"
+
+            app:cardElevation="8px"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+        >
+            <ImageView android:layout_height="100dp"
+                       android:id="@+id/cartImage"
+                       android:src="@drawable/ic_shopping_cart_black_24px"
+                       android:layout_marginRight="16dp"
+                       android:layout_width="100dp">
+
+            </ImageView>
+            <TextView android:layout_height="wrap_content"
+                      android:id="@+id/totalLine1"
+                      android:textColor="#22536d"
+                      android:textSize="24sp"
+                      android:layout_toRightOf="@id/cartImage"
+                      android:layout_width="match_parent">
+            </TextView>
+            <TextView android:layout_height="wrap_content"
+                      android:id="@+id/totalLine2"
+                      android:textSize="20sp"
+                      android:layout_toRightOf="@id/cartImage"
+                      android:layout_below="@id/totalLine1"
+                      android:layout_width="match_parent">
+            </TextView>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>-->
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_below="@id/totalCard"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/productsListView"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+            android:id="@+id/image_load_progress"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+
+</RelativeLayout>
